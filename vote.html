@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<HTML lang="en">
+  <head>
+    <title>Voting App</title>
+    <link rel="stylesheet"href="vote.css">
+    <script src ="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="app-wrapper">
+      <header>
+        <h1>Vote for your Candidate</h1>
+        <p>Cast your and watch the live results!</p>
+      </header>
+
+      <main class="voting-section">
+        <div class="candidate-card">
+          <img src="https://th.bing.com/th/id/OIP.p1fVBVurA16vSEynl3Gs4gHaEK?w=273&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Candidate A">
+          <h2>Candidate A</h2>
+          <button onclick="vote('A')">Vote for A</button>
+        </div>
+        <div class="candidate-card">
+          <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202402/65ddb4eac9e60-sp-mlas-cross-vote-for-bjp-in-rajya-sabha-elections--akhilesh-yadav-calls-it-a-loyalty-test-270945506-16x9.jpg"alt="Candidate B">
+          <h2>Candidate B</h2>
+          <button onclick="vote('B')">Vote for B</button>
+        </div>
+        <div class="candidate-card">
+          <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202404/will-rahul-gandhi-return-to-amethi-battle-against-smriti-irani-congress-positive-092637102-16x9_0.jpg?VersionId=Y509Dq5rs0SCDEuTZ0Zoj0MWjv09qHw9"alt="Candidate C">
+          <h2>Candidate C</h2>
+          <button onclick="vote('C')">Vote for C</button>
+      </div>
+      </main>
+      <section class="result-section">
+      <h2>Live Voting Results</h2>
+      <canvas id="resultsChart"></canvas>
+      <p>Total Votes: <span id="totalVotes">0</span></p>
+      <div id="detailedResults"style="display:none;">
+        <h3>Vote Breakdown:</h3>
+        <p>Candidate A: <span id="votesA ">0</span>votes(<span id="percentA">0%</span>)</p>
+        <p>Candidate B: <span id="votesB">0</span> votes (<span id="percentB">0%</span>)</p>
+        <p>Candidate C: <span id="votesC">0</span> votes (<span id="percentC">0%</span>)</p>
+     </div>
+     <button id="showResults"onclick="showDetailedResults()">Show Results</button>
+     <button id="reset"onclick="resetVotes()">Reset</button>
+   </section>
+</div>
+
+   <script src="script.js"></script>
+  </body>
+</HTML>
